@@ -48,8 +48,42 @@ agency-system/
 ├── meetings/         # Meeting templates and notes
 ├── reports/          # Performance tracking and analytics
 ├── templates/        # Reusable templates for common tasks
-└── resources/        # Tools, contacts, and reference materials
+├── resources/        # Tools, contacts, and reference materials
+└── integrations/     # HubSpot, Calendar, GoCardless automation
 ```
+
+## 🔗 System Integrations
+
+**Your markdown system connects with your favorite tools!**
+
+This system integrates with HubSpot (CRM), Google Calendar/Outlook, and GoCardless (payments) to create a seamless automated workflow.
+
+### What Gets Automated
+- **HubSpot**: Sync client health scores, log activities, track deals, update contacts
+- **Calendar**: Auto-create events for deliverables, log meetings, set renewal reminders
+- **GoCardless**: Track payments, update financial health, alert on issues, calculate MRR
+
+### Quick Setup
+```
+"Set up HubSpot integration"
+"Connect my Google Calendar"
+"Configure GoCardless payment tracking"
+"Run morning routine automation"
+```
+
+See **[`/integrations/README.md`](integrations/README.md)** for complete setup guides and automation workflows.
+
+### Automated Workflows
+Once set up, your system automatically:
+- **Morning Routine** (8 AM daily): Check payments, sync calendar, brief you on the day
+- **Failed Payment** (real-time): Alert, update health, create tasks, draft communication
+- **Weekly Review** (Monday 9 AM): Update all health scores, draft client emails, create action plan
+- **Meeting Complete**: Log notes, update health, create tasks, sync to HubSpot
+- **Client At-Risk**: Create recovery plan, schedule intervention, alert team
+
+**No more manual data entry. Your markdown files stay the source of truth while everything syncs automatically.**
+
+---
 
 ## 🤖 How to Use Claude Code as Your Executive Assistant
 
