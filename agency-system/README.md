@@ -49,7 +49,9 @@ agency-system/
 ├── reports/          # Performance tracking and analytics
 ├── templates/        # Reusable templates for common tasks
 ├── resources/        # Tools, contacts, and reference materials
-└── integrations/     # HubSpot, Calendar, GoCardless automation
+├── integrations/     # HubSpot, Calendar, GoCardless automation
+├── team/             # Team collaboration and access control
+└── growth/           # Scaling playbook to £1M/month
 ```
 
 ## 🔗 System Integrations
@@ -82,6 +84,65 @@ Once set up, your system automatically:
 - **Client At-Risk**: Create recovery plan, schedule intervention, alert team
 
 **No more manual data entry. Your markdown files stay the source of truth while everything syncs automatically.**
+
+---
+
+## 👥 Team Collaboration
+
+**Your team can use this system too!**
+
+Enable role-based access so your team collaborates effectively while you maintain control.
+
+### Team Roles
+- **Owner (You)**: Full access to everything
+- **Account Manager**: Their assigned clients only
+- **Project Manager**: All projects and resources
+- **Specialist**: Their assigned tasks only
+- **Contractor**: Specific project only
+
+### Set Up Team Access
+```
+"Set up team access for [Name] as [Role]"
+"Show team capacity for this week"
+"Generate team performance report"
+```
+
+**Each team member gets appropriate access through**:
+- GitHub branch permissions
+- Shared drive folder access
+- Claude Code role-based commands
+
+See **[`/team/team-collaboration.md`](team/team-collaboration.md)** for complete team setup guide, permissions, workflows, and security.
+
+---
+
+## 🚀 Scale to £1M per Month
+
+**Your complete roadmap from wherever you are to £1,000,000 monthly revenue.**
+
+### The Path
+- **Phase 1**: £0-50k MRR - Foundation
+- **Phase 2**: £50-150k MRR - Validation
+- **Phase 3**: £150-300k MRR - Systematization
+- **Phase 4**: £300-500k MRR - Specialization
+- **Phase 5**: £500-750k MRR - Scale
+- **Phase 6**: £750k-1M MRR - Optimization
+
+### The 4 Growth Levers
+1. **Client Acquisition**: Get more clients (outbound, inbound, referrals)
+2. **Client Retention**: Keep them longer (95%+ target with your client success system)
+3. **Average Client Value**: Grow revenue per client (upsells, price increases)
+4. **Operational Efficiency**: Do more with less (systems, automation, team leverage)
+
+### Quick Actions
+```
+"What growth phase am I in?"
+"Build my custom path to £1M/month"
+"Create a 90-day growth sprint plan"
+"What should I focus on to accelerate growth?"
+```
+
+See **[`/growth/scaling-to-1m-month.md`](growth/scaling-to-1m-month.md)** for complete scaling playbook with financial models, hiring strategy, metrics dashboard, and month-by-month action plans.
 
 ---
 
