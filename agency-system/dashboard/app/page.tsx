@@ -161,21 +161,36 @@ export default function Dashboard() {
           <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
             Quick Actions
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <QuickAction
-              title="View 60-Day Sprint"
+              title="📊 Revenue Analytics"
+              description="Charts, trends & forecasts"
+              href="/analytics"
+            />
+            <QuickAction
+              title="🎯 60-Day Sprint"
               description="Track progress to £100k/month"
               href="/sprint"
             />
             <QuickAction
-              title="Team Dashboard"
-              description="View team performance & capacity"
+              title="👥 Team Performance"
+              description="Team metrics & capacity"
               href="/team"
             />
             <QuickAction
-              title="Revenue Analytics"
-              description="Deep dive into financials"
-              href="/analytics"
+              title="✅ Task Management"
+              description="Kanban board & deadlines"
+              href="/tasks"
+            />
+            <QuickAction
+              title="💳 Client Portal"
+              description="Client-facing dashboard"
+              href="/portal"
+            />
+            <QuickAction
+              title="⚙️ Integrations"
+              description="HubSpot, GoCardless & more"
+              href="/settings"
             />
           </div>
         </div>
