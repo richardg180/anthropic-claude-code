@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Custom colors for the three pillars */
+  --color-health: #10b981;
+  --color-health-light: #d1fae5;
+  --color-health-dark: #059669;
+
+  --color-wealth: #f59e0b;
+  --color-wealth-light: #fef3c7;
+  --color-wealth-dark: #d97706;
+
+  --color-relationships: #ec4899;
+  --color-relationships-light: #fce7f3;
+  --color-relationships-dark: #db2777;
+
+  /* XP and level colors */
+  --color-xp: #8b5cf6;
+  --color-xp-light: #ede9fe;
+  --color-streak: #ef4444;
+
+  /* Dark theme */
+  --color-bg-dark: #0f0f0f;
+  --color-card-dark: #1a1a1a;
+  --color-border-dark: #2a2a2a;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bg-dark text-white antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Glow effects */
+.glow-health {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.glow-wealth {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+.glow-relationships {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.glow-xp {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Progress ring animation */
+@keyframes progress-ring {
+  from {
+    stroke-dashoffset: 283;
+  }
+}
+
+.progress-ring-animate {
+  animation: progress-ring 1s ease-out forwards;
+}
+
+/* Level up animation */
+@keyframes level-up {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.level-up-animation {
+  animation: level-up 0.5s ease-out;
+}
+
+/* Pulse animation for active streaks */
+@keyframes streak-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.streak-active {
+  animation: streak-pulse 2s ease-in-out infinite;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Checkbox custom styling */
+.habit-checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.habit-checkbox:checked {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border-color: transparent;
+}
+
+.habit-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Badge shine effect */
+@keyframes badge-shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.badge-shine {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: badge-shine 3s ease-in-out infinite;
+}
