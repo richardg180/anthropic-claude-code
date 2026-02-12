@@ -166,7 +166,7 @@ export default function SprintPage() {
                   borderRadius: '8px',
                   color: '#fff'
                 }}
-                formatter={(value: number) => [`£${value.toLocaleString()}`, '']}
+                formatter={(value: number | undefined) => [`£${(value ?? 0).toLocaleString()}`, '']}
               />
               <Area
                 type="monotone"

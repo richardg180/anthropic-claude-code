@@ -133,7 +133,7 @@ export default function AnalyticsPage() {
                   borderRadius: '8px',
                   color: '#fff'
                 }}
-                formatter={(value: number) => [`£${value.toLocaleString()}`, '']}
+                formatter={(value: number | undefined) => [`£${(value ?? 0).toLocaleString()}`, '']}
               />
               <Legend />
               <Area
@@ -175,7 +175,7 @@ export default function AnalyticsPage() {
                   borderRadius: '8px',
                   color: '#fff'
                 }}
-                formatter={(value: number) => [`£${value.toLocaleString()}`, '']}
+                formatter={(value: number | undefined) => [`£${(value ?? 0).toLocaleString()}`, '']}
               />
               <Legend />
               <Line
@@ -222,7 +222,7 @@ export default function AnalyticsPage() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ service, value }) => `${service.split(' ')[0]} ${value}%`}
+                  label={({ service, value }: any) => `${service?.split(' ')[0]} ${value}%`}
                   outerRadius={100}
                   fill="#8884d8"
                   dataKey="value"
@@ -238,8 +238,8 @@ export default function AnalyticsPage() {
                     borderRadius: '8px',
                     color: '#fff'
                   }}
-                  formatter={(value: number, name: string, props: any) => [
-                    `£${props.payload.revenue.toLocaleString()} (${value}%)`,
+                  formatter={(value: number | undefined, name: string | undefined, props: any) => [
+                    `£${props?.payload?.revenue?.toLocaleString()} (${value}%)`,
                     ''
                   ]}
                 />

@@ -35,7 +35,7 @@ const recentUpdates = [
   {
     date: '2026-01-23',
     title: 'Social Media Strategy Approved',
-    description: 'Content calendar for February has been finalized. We'll be posting 5x per week focusing on before/after results and treatment education.'
+    description: "Content calendar for February has been finalized. We'll be posting 5x per week focusing on before/after results and treatment education."
   },
   {
     date: '2026-01-24',

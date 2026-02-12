@@ -172,7 +172,7 @@ function formatMarkdown(content: string): string {
 
   // Lists
   html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
-  html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+  html = html.replace(new RegExp('(<li>.*<\\/li>)', 's'), '<ul>$1</ul>');
 
   // Paragraphs
   html = html.replace(/\n\n/g, '</p><p>');
